@@ -29,7 +29,7 @@
 	--text-primary: color-mix(in oklab, var(--neutral-4) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
 	--icon-primary: var(--text-primary);
 	--notice-text-warning: hsl(from var(--text-primary) calc(h - 176) calc(s + 87) calc(l - 1));
-    --channels-default: hsl(from var(--text-primary) calc(h - 5) calc(s - 4) calc(l - 34));
+    --channels-default: hsl(from var(--text-primary) calc(h - 25) calc(s + 5) calc(l - 34));
     --channel-icon: hsl(from var(--channels-default) calc(h + 9) calc(s - 3) calc(l - 8));
     --channels-header: hsl(from var(--channels-default) calc(h + 2) calc(s - 1) calc(l + 12));
 	--background-code: hsl(from var(--background-base-lower) calc(h - 6) calc(s + 1) calc(l - 2));
@@ -316,7 +316,6 @@ span.button__67645.enabled__67645:hover  {
 	bottom: 0px;
 }
 .visual-refresh .iconWrapper__9293f > .svg__2338f foreignObject[mask="url(#svg-mask-header-bar-badge-bottom)"]{
-	/* mask: none; */
     width: 16px;
     height: 16px;
 	y: 1.5;
