@@ -136,6 +136,12 @@ span.button__67645.enabled__67645:hover  {
 		x: -4;
 		y: -4;
 	}
+	.wrapper_cc5dd2 > .svg_cc5dd2 foreignObject[width="48"] {
+		mask: none;
+		overflow: visible;
+		x: -4;
+		y: -4;
+	}
 	.wrapper_cc5dd2 > .svg_cc5dd2 foreignObject[width="32"] {
 		overflow: visible;
 		x: 0;
@@ -306,8 +312,22 @@ span.button__67645.enabled__67645:hover  {
 .bar_c38106 .trailing_c38106 .iconWrapper__9293f .icon__9293f {
     width: 16px;
     height: 16px;
-    padding-bottom: 3px;
+	top: 0px;
+	bottom: 0px;
 }
+.visual-refresh .iconWrapper__9293f > .svg__2338f foreignObject[mask="url(#svg-mask-header-bar-badge-bottom)"]{
+	/* mask: none; */
+    width: 16px;
+    height: 16px;
+	y: 1.5;
+}
+.iconBadge__9293f {
+	bottom: 4px !important;
+	right: 5.5px !important;
+    width: 7px;
+    height: 7px;
+}
+
 .visual-refresh .title__85643 {
     display: none;
 }
@@ -336,7 +356,7 @@ span.button__67645.enabled__67645:hover  {
 	/* Folders */
     .wrapper__48112 {
 		.expandedFolderBackground__48112 {
-		    left: 15px;
+		    left: 16px;
 	        width: 48px;
 	        bottom: 0px;
 	        border-radius: 16px 16px 25px 25px;
@@ -344,15 +364,15 @@ span.button__67645.enabled__67645:hover  {
 	        border: none;
 		}
 	    .folder__48112 {
-	        margin-left: -5px;
-	        margin-top: -5px;
+	        margin-left: 0px;
+	        margin-top: 0px;
 		}
 	    .folderIconWrapper__48112, .folder__48112 {
-	        width: 50px;
-	        height: 50px;
+	        width: 48px;
+	        height: 48px;
 	        overflow: hidden;
 	        border-radius: 16px;
-			--bg-mod-subtle: rgba(114, 137, 218, 0.4) !important;
+			--bg-mod-subtle: hsl(from var(--background-modifier-accent) calc(h + 2) calc(s + 15) calc(l + 20)) !important;
 		}
 		.iconSizeMini_f34534 {
 			width: 16px;
@@ -383,9 +403,9 @@ span.button__67645.enabled__67645:hover  {
 		width: 48px;
 	    height: 48px;
 	    background: (rgba(240,71,71,.1));
-	    border-color: var(--red);
+	    border-color: var(--text-feedback-critical);
 		&:hover {
-	    	background: var(--red);
+	    	background: var(--text-feedback-critical);
 		}
 	}
 
