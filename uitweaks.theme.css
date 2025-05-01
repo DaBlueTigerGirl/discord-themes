@@ -16,7 +16,7 @@
 	--background-mod-subtle: hsl(var(--opacity-8-hsl)/0.1);
 	--button-primary-background-hover: hsl(var(--opacity-20-hsl)/0.2);
 	--button-secondary-background-hover: var(--blurple);
-    --scrollbar-auto-thumb: hsl(from var(--background-base-lowester) calc(h - 9) calc(s + 1) calc(l + 1));
+	--scrollbar-auto-thumb: color-mix(in hsl, var(--neutral-50) 100%, var(--background-base-low) var(--theme-text-color-amount, 75%));
     --scrollbar-thin-thumb: var(--scrollbar-auto-thumb);
     
 	--text-link: #00AAFC !important;
@@ -32,13 +32,15 @@
     --channels-default: hsl(from var(--text-primary) calc(h - 25) calc(s + 5) calc(l - 34));
     --channel-icon: hsl(from var(--channels-default) calc(h + 9) calc(s - 3) calc(l - 8));
     --channels-header: hsl(from var(--channels-default) calc(h + 2) calc(s - 1) calc(l + 12));
-	--background-code: hsl(from var(--background-base-lower) calc(h - 6) calc(s + 1) calc(l - 2));
-	--border-code: hsl(from var(--background-code) calc(h + 10) calc(s + 7) calc(l - 5));
-	--spoiler-hidden-background: var(--primary-700);
-	--spoiler-hidden-background-hover: hsl(var(--primary-700-hsl)/0.75);
+	--background-code: hsl(from var(--background-base-lower) calc(h - 6) calc(s + 1) calc(l - 3));
+	/* --border-code: hsl(from var(--background-code) calc(h + 10) calc(s + 7) calc(l - 5)); */
+	--border-code: color-mix(in oklab, var(--neutral-40) 50%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+	--spoiler-hidden-background: color-mix(in hsl, var(--neutral-80) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+	--spoiler-hidden-background-hover: hsl(from var(--spoiler-hidden-background) h s l / 0.60);
     
 	--custom-member-list-width: 255px;
     --custom-app-top-bar-height: 25px;
+	--guildbar-avatar-size: 48px;
 }
 .theme-dark:not(html.custom-theme-background, :has(#clientThemeVars)) {
 	--bg-brand: var(--blurple);
@@ -66,9 +68,11 @@ span.button__67645.enabled__67645:hover  {
     .guilds_c48ade {
         margin-top: -12px;
     }
+	.base_c48ade {
+		background: var(--bg-overlay-5, var(--background-base-lowester));
+	}
 	.base_c48ade .sidebar_c48ade {
         overflow: visible !important;
-        background: var(--background-base-lowester) !important;
 	}
 	.base_c48ade .sidebar_c48ade > .guilds_c48ade {
 		margin-bottom: 0;
@@ -117,18 +121,19 @@ span.button__67645.enabled__67645:hover  {
 	.wrapper_cc5dd2,
 	.childWrapper__6e9f8,
 	.icon__6e9f8 {
-		width: 48px;
-		height: 48px;
+		width: 48px !important;
+		height: 48px !important;
 	}
 	.childWrapper__6e9f8 > .wrapper__44b0c svg {
-		left: -5px;
-		top: -8px;
-		width: 64px !important;
-		height: 64px !important;
+		left: -4px;
+		top: -4px;
+		width: 60px !important;
+		height: 54px !important;
 	}
 	.wrapper_cc5dd2 > .svg_cc5dd2 {
 		inset: auto;
 		contain: none;
+		overflow: hidden !important;
 	}
 	.wrapper_cc5dd2 > .svg_cc5dd2 foreignObject[width="40"] {
 		mask: none;
@@ -138,7 +143,7 @@ span.button__67645.enabled__67645:hover  {
 	}
 	.wrapper_cc5dd2 > .svg_cc5dd2 foreignObject[width="48"] {
 		mask: none;
-		overflow: visible;
+		overflow: hidden;
 		x: -4;
 		y: -4;
 	}
@@ -157,14 +162,12 @@ span.button__67645.enabled__67645:hover  {
 		top: -5px;
 	}
 	.childWrapper__6e9f8 > .svg__2338f{
-		/* width: 40px !important;
-		height: 40px !important; */
 		inset: auto;
 		contain: none;
 	}
 	.wrapper_cc5dd2 .wrapper__6e9f8 {
-		width: 48px;
-		height: 48px;
+		width: 48px !important;
+		height: 48px !important;
 		border-radius: 25px;
 		overflow: hidden;
 		transition: border-radius 0.2s ease;
@@ -191,14 +194,9 @@ span.button__67645.enabled__67645:hover  {
 		top: -4px;
 		margin-right: -5px;
 	}
-    /* Gray square when moving a server */
-	.dragInner__87847 {
-		background-color: var(--background-base-lowest) !important;
-		border: none !important;
-	}
 	svg.placeholderMask__87847 {
-		width: 50px;
-		height: 50px;
+		width: 48px !important;
+		height: 48px !important;
 	}
 	.childWrapper__6e9f8 svg {
 		height: 30px !important;
@@ -248,6 +246,8 @@ span.button__67645.enabled__67645:hover  {
 	.total__260e1:after {
 		border-right-color: var(--background-base-lowester);
 	}
+
+	/* Call background - doesnt work */
 	.root_bfe55a {
 		background: var(--background-base-lowester) !important;
 	}
@@ -281,8 +281,7 @@ span.button__67645.enabled__67645:hover  {
 /* Profile Bar */
 .visual-refresh .panels_c48ade {
     --custom-panels-spacing: 32px;
-    background: var(--background-base-lower);
-    /* background: var(--bg-overlay-floating, var(--background-base-low)); */
+    background: var(--bg-overlay-floating, var(--background-base-lower));
     border: 1px solid var(--border-faint);
     border-radius: var(--radius-sm);
     bottom: 8px;
@@ -298,7 +297,7 @@ span.button__67645.enabled__67645:hover  {
 }
 /* Now playing area */
 .visual-refresh .base_c48ade .sidebar_c48ade > .panels_c48ade .panel__5dec7 {
-	background-color: var(--background-base-lower);
+	background: var(--bg-overlay-floating, var(--background-base-lower));
 	padding-top: 3px;
 	padding-bottom: 0px;
 }
@@ -330,9 +329,6 @@ span.button__67645.enabled__67645:hover  {
 .visual-refresh .title__85643 {
     display: none;
 }
-.bar_c38106, .visual-refresh .wrapper_ef3116{
-    background-color: var(--background-base-lowester);
-}
 
 
 /* Server list, mostly from milbits and THEYAKUZI */
@@ -352,55 +348,17 @@ span.button__67645.enabled__67645:hover  {
     .guildSeparator__252b6 {
       height: 2px;
     }
-	/* Folders */
-    .wrapper__48112 {
-		.expandedFolderBackground__48112 {
-		    left: 16px;
-	        width: 48px;
-	        bottom: 0px;
-	        border-radius: 16px 16px 25px 25px;
-	        background: var(--background-modifier-accent);
-	        border: none;
-		}
-	    .folder__48112 {
-	        margin-left: 0px;
-	        margin-top: 0px;
-		}
-	    .folderIconWrapper__48112, .folder__48112 {
-	        width: 48px;
-	        height: 48px;
-	        overflow: hidden;
-	        border-radius: 16px;
-			--bg-mod-subtle: hsl(from var(--background-modifier-accent) calc(h + 2) calc(s + 15) calc(l + 20)) !important;
-		}
-		.iconSizeMini_f34534 {
-			width: 16px;
-			height: 16px;
-		}
-	    .expandedFolderIconWrapper__48112 {
-	        margin: 0;
-	        width: 48px;
-	        height: 48px;
-	        > svg {
-			    width: 24px;
-			    height: 24px;
-		    }
-	    }
-	    .closedFolderIconWrapper__48112 .guildIcon__48112 {
-	        border-radius: 32px !important;
-		}
-	    gap: 8px !important;
-	}
+	
 	.listItem__650eb:has(.circleIcon__5bc7e) {
 		.circleIconButton__5bc7e {
 			border-radius: 50%;
-			width: 48px;
-			height: 48px;
+			width: 48px !important;
+			height: 48px !important;
 		}
 	}
 	.guildsError_e8d03f {
-		width: 48px;
-	    height: 48px;
+		width: 48px !important;
+	    height: 48px !important;
 	    background: (rgba(240,71,71,.1));
 	    border-color: var(--text-feedback-critical);
 		&:hover {
@@ -423,4 +381,19 @@ span.button__67645.enabled__67645:hover  {
 }
 .sidebar_c48ade:after {
 	display: none;
+}
+
+
+.folderPreviewGuildIcon__48112{
+	border-radius: 12px !important;
+}
+
+.folderGroupBackground__48112 {
+	left: calc((var(--custom-guild-list-padding) - (var(--guildbar-folder-size) - var(--guildbar-avatar-size))/2) - 1px);
+	border-radius: 16px;
+	width: calc(var(--guildbar-folder-size) + 2px);
+}
+
+.folderGroup__48112 > .listItem__650eb {
+	gap: 20px !important;
 }
