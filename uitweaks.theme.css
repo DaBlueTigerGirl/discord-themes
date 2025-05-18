@@ -9,34 +9,34 @@
 
 .visual-refresh, .theme-dark, .visual-refresh.theme-dark, .visual-refresh.theme-light, body {
     --blurple: #5865F2;
-    --background-base-lowest: hsl(from var(--background-base-lower) calc(h - 11) calc(s + 0) calc(l - 3));
-    --background-base-lowester: hsl(from var(--background-base-lower) calc(h - 6) calc(s - 1) calc(l - 8));
-	--background-modifier-selected: hsl(from var(--background-base-lowest) calc(h + 10) calc(s - 2) calc(l + 5));
-	--background-message-hover: hsl(from var(--background-base-lower) calc(h - 1) calc(s - 1) calc(l - 2));
-	--background-mod-subtle: hsl(var(--opacity-8-hsl)/0.1);
-	--button-primary-background-hover: hsl(var(--opacity-20-hsl)/0.2);
-	--button-secondary-background-hover: var(--blurple);
-	--scrollbar-auto-thumb: color-mix(in hsl, var(--neutral-50) 100%, var(--background-base-low) var(--theme-text-color-amount, 75%));
-    --scrollbar-thin-thumb: var(--scrollbar-auto-thumb);
+    --background-base-lowest: hsl(from var(--background-base-lower) calc(h - 11) calc(s + 0) calc(l - 3)) !important;
+    --background-base-lowester: hsl(from var(--background-base-lower) calc(h - 6) calc(s - 1) calc(l - 8)) !important;
+	--background-modifier-selected: hsl(from var(--background-base-lowest) calc(h + 10) calc(s - 2) calc(l + 5)) !important;
+	--background-message-hover: hsl(from var(--background-base-lower) calc(h - 1) calc(s - 1) calc(l - 2)) !important;
+	--background-mod-subtle: hsl(var(--opacity-8-hsl)/0.1) !important;
+	--button-primary-background-hover: hsl(var(--opacity-20-hsl)/0.2) !important;
+	--button-secondary-background-hover: var(--blurple) !important;
+	--scrollbar-auto-thumb: color-mix(in hsl, var(--neutral-50) 100%, var(--background-base-low) var(--theme-text-color-amount, 75%)) !important;
+    --scrollbar-thin-thumb: var(--scrollbar-auto-thumb) !important;
     
 	--text-link: #00AAFC !important;
     --text-feedback-critical: #F04139 !important;
-    --text-danger: #FF6059;
-    --text-feedback-info: color-mix(in oklab, var(--blue-new-29) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+    --text-danger: #FF6059 !important;
+    --text-feedback-info: color-mix(in oklab, var(--blue-new-29) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%)) !important;
     --text-feedback-positive: #49BC66 !important;
     --text-feedback-warning: #EC9623 !important;
-	--notice-background-warning: #B98B18;
-	--text-primary: color-mix(in oklab, var(--neutral-4) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-	--icon-primary: var(--text-primary);
-	--notice-text-warning: hsl(from var(--text-primary) calc(h - 176) calc(s + 87) calc(l - 1));
-    --channels-default: hsl(from var(--text-primary) calc(h - 25) calc(s + 5) calc(l - 34));
-    --channel-icon: hsl(from var(--channels-default) calc(h + 9) calc(s - 3) calc(l - 8));
-    --channels-header: hsl(from var(--channels-default) calc(h + 2) calc(s - 1) calc(l + 12));
-	--background-code: hsl(from var(--background-base-lower) calc(h - 6) calc(s + 1) calc(l - 3));
+	--notice-background-warning: #B98B18 !important;
+	--text-primary: color-mix(in oklab, var(--neutral-4) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%)) !important;
+	--icon-primary: var(--text-primary) !important;
+	--notice-text-warning: hsl(from var(--text-primary) calc(h - 176) calc(s + 87) calc(l - 1)) !important;
+    --channels-default: hsl(from var(--text-primary) calc(h - 25) calc(s + 5) calc(l - 34)) !important;
+    --channel-icon: hsl(from var(--channels-default) calc(h + 9) calc(s - 3) calc(l - 8)) !important;
+    --channels-header: hsl(from var(--channels-default) calc(h + 2) calc(s - 1) calc(l + 12)) !important;
+	--background-code: hsl(from var(--background-base-lower) calc(h - 6) calc(s + 1) calc(l - 3)) !important;
 	/* --border-code: hsl(from var(--background-code) calc(h + 10) calc(s + 7) calc(l - 5)); */
-	--border-code: color-mix(in oklab, var(--neutral-40) 50%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-	--spoiler-hidden-background: color-mix(in hsl, var(--neutral-80) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-	--spoiler-hidden-background-hover: hsl(from var(--spoiler-hidden-background) h s l / 0.60);
+	--border-code: color-mix(in oklab, var(--neutral-40) 50%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%)) !important;
+	--spoiler-hidden-background: color-mix(in hsl, var(--neutral-80) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%)) !important;
+	--spoiler-hidden-background-hover: hsl(from var(--spoiler-hidden-background) h s l / 0.60) !important;
     
 	--custom-member-list-width: 255px;
     --custom-app-top-bar-height: 25px;
@@ -62,6 +62,11 @@ span.button__67645.enabled__67645:hover  {
 	background: var(--button-primary-background-hover) !important;
 }
 
+/* DM button */
+.childWrapperNoHoverBg__6e9f8 {
+	background: var(--background-base-low);
+}
+
 
 
 .visual-refresh {
@@ -80,7 +85,7 @@ span.button__67645.enabled__67645:hover  {
 		margin-bottom: 0;
 	}
     .sidebarList_c48ade {
-		border-color: hsl(from var(--app-border-frame) h s l / 0.19);
+		border-color: hsl(from var(--app-border-frame) h s l / 0.15);
     }
 
     /* Server list icons */
@@ -105,10 +110,17 @@ span.button__67645.enabled__67645:hover  {
 		}
 	}
     #guild-list-unread-dms {
-        gap: 20px !important;
-        padding-top: 5px !important;
+        gap: 9px !important;
         padding-bottom: 5px !important;
     }
+	
+    #guild-list-unread-dms .listItem__650eb {
+        padding-top: 5px !important;
+    }
+	#guild-list-unread-dms div[style="opacity: 1; height: 40px; transform: scale(1);"]{
+		height: 50px !important;
+        padding-bottom: 2px !important;
+	}
     .stack_dbd263 {
         gap: 9px !important;
     }
@@ -195,10 +207,10 @@ span.button__67645.enabled__67645:hover  {
 	}
     /* Ping and call badges */
 	.wrapper_cc5dd2 > .svg_cc5dd2 .badgeStroke_cc5dd2[id$="lower_badge_masks"] {
-		transform: translate(8%, 7%) !important;
+		transform: translate(7.5%, 7%) !important;
 	}
 	.wrapper_cc5dd2 > .svg_cc5dd2 .badgeStroke_cc5dd2[id$="upper_badge_masks"] {
-		transform: translate(8%, -7%) !important;
+		transform: translate(7.5%, -7%) !important;
 	}
 	svg.placeholderMask__87847 {
 		width: 48px !important;
@@ -351,6 +363,7 @@ span.button__67645.enabled__67645:hover  {
     }
     .guildSeparator__252b6 {
       height: 2px;
+	  /* margin-top: 10px; */
     }
 	
 	.listItem__650eb:has(.circleIcon__5bc7e) {
