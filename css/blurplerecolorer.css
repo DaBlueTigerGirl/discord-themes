@@ -11,7 +11,7 @@
 body {
 	--blurple: hsl(var(--h), var(--s), var(--l)) !important;
     
-	--blurple-50: hsl(from var(--blurple) calc(h - 0) calc(s + 0) calc(l + 0));
+	--blurple-50: var(--blurple);
 
 	
 	--blurple-49: hsl(from var(--blurple-50) 
