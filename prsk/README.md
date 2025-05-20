@@ -1,15 +1,13 @@
 # Nightcord Mini
 
-Changes the Discord logo in the top left and the default color.
+Change the Discord logo in the upper left and the default accent color to match any Project Sekai group.
 - Pick from any Project Sekai unit logo or the Nightcord one
     - You can add your own icon as well if you know how
 - Change Discord's Blurple to be whatever color you want, all of the character's colors are provided 
 - Both are optional and can be turned off in settings
 
 ## Examples
-<p align="center">
 <img height=187 src="https://raw.githubusercontent.com/dabluee/discord-themes/refs/heads/main/prsk/assets/logoexample.png">
-</p>
 
 ## How to Edit
 1. Open the .css file in any text editor (Notepad for example).
