@@ -13,7 +13,7 @@
 body {
 	container-name: body;
 
-	/* These are your options for which logo and color you would like to use */
+	/* These are the default options for which logo and color you would like to use */
 	--nightcord-logo: url('https://dabluee.github.io/discord-themes/prsk/assets/logos/nightcord.svg');
 	--vs-logo: url('https://dabluee.github.io/discord-themes/prsk/assets/logos/vs.svg');
 	--virtualsinger: hsl(175, 100%, 40%);
@@ -54,16 +54,16 @@ body {
 	--ena: hsl(30, 40%, 66%);
 	--mizuki: hsl(326, 53%, 78%);
 
-	/* Change these values to match the ones you want above.
+	/* Change these values to match the options you want from above.
 		It is currently set to mafuyu and nightcord as an example. */
 	
 	/* Recolor Discord's Blurple Basic: 
-		Copy the name from the one you want above, this changes the most common blurple colors you see. Easy to swtich between options. */
+		Copy the name from the one you want, this changes the most common blurple colors you see. Easy to swtich between options. */
 	--recolor: on;
 	--custom-color: var(--mafuyu);
 
 	/* Recolor Discord's Blurple Max: 
-		Copy the hsl numbers from the one you want above, this changes every blurple color, most of which you may not see. It can look strange at times so it's recommended to be off. */
+		Copy the hsl numbers from the one you want, this changes every blurple color, most of which you may not see. It can look strange at times so it's recommended to be off. */
 	--recolor-max: off;
 	--h: 239;
 	--s: 40%;

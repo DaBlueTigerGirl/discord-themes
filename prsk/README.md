@@ -1,13 +1,13 @@
 # Nightcord Mini
 
-Changes the Discord logo in the top left and the default color
+Changes the Discord logo in the top left and the default color.
 - Pick from any Project Sekai unit logo or the Nightcord one
-- You can add your own icon as well if you know how
+    - You can add your own icon as well if you know how
 - Change Discord's Blurple to be whatever color you want, all of the character's colors are provided 
 - Both are optional and can be turned off in settings
 
 ## Examples
-<img width=750 src="https://dabluee.github.io/discord-themes/prsk/assets/logoexample.png">
+<img height=187 src="https://dabluee.github.io/discord-themes/prsk/assets/logoexample.png">
 
 ## How to Edit
 1. Open the .css file in any text editor (Notepad for example).
@@ -15,9 +15,10 @@ Changes the Discord logo in the top left and the default color
     <img width=500 src="https://dabluee.github.io/discord-themes/prsk/assets/nightcordoptions.png">
 3. Pick whichever options you would like.
     - Change `--recolor: on;` to `--recolor: off;` if you want Discord's Blurple back.
-    - Change `--custom-color: var(--mafuyu);` to `--custom-color: var(--an);` for example.
-    - The custom logo works the same as above.
-    - It can be annoying to change between options for recolor-max, so it is not necessary. Some examples on how good to how off colors can look with this option are shown below. 
+    - Change `--custom-color: var(--mafuyu);` to `--custom-color: var(--an);` if you want a different color for example.
+    - The custom logo works the same as recoloring as shown above.
+    - It can be annoying to change between options for recolor-max, so it is not necessary. Some examples on how good to how off colors can look with this option are shown below.
+
         <img width=500 src="https://dabluee.github.io/discord-themes/prsk/assets/blurpleexample.png">
 
 ## Installation
