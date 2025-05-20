@@ -7,19 +7,19 @@ Changes the Discord logo in the top left and the default color.
 - Both are optional and can be turned off in settings
 
 ## Examples
-<img height=187 src="https://dabluee.github.io/discord-themes/prsk/assets/logoexample.png">
+<img height=187 src="https://raw.githubusercontent.com/dabluee/discord-themes/refs/heads/main/prsk/assets/logoexample.png">
 
 ## How to Edit
 1. Open the .css file in any text editor (Notepad for example).
 2. Scroll down to the section shown below (Should be right above the giant block of space).
-    <img width=500 src="https://dabluee.github.io/discord-themes/prsk/assets/nightcordoptions.png">
+    <img width=500 src="https://raw.githubusercontent.com/dabluee/discord-themes/refs/heads/main/prsk/assets/nightcordoptions.png">
 3. Pick whichever options you would like.
     - Change `--recolor: on;` to `--recolor: off;` if you want Discord's Blurple back.
     - Change `--custom-color: var(--mafuyu);` to `--custom-color: var(--an);` if you want a different color for example.
     - The custom logo works the same as recoloring as shown above.
     - It can be annoying to change between options for recolor-max, so it is not necessary. Some examples on how good to how off colors can look with this option are shown below.
 
-        <img width=500 src="https://dabluee.github.io/discord-themes/prsk/assets/blurpleexample.png">
+        <img width=500 src="https://raw.githubusercontent.com/dabluee/discord-themes/refs/heads/main/prsk/assets/blurpleexample.png">
 
 ## Installation
 
