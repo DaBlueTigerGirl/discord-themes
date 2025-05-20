@@ -17,5 +17,7 @@ Adds a few elements from the old ui into the new one.
 
 ## Installation
 
-1. Download the theme file, [`uitweaks.theme.css`](https://github.com/dabluee/discord-themes/blob/main/uitweaks.theme.css).
+1. Download the theme file [uitweaks.theme.css](https://raw.githubusercontent.com/dabluee/discord-themes/refs/heads/main/uitweaks.theme.css) (Right click > Save as...).
 2. Drag the file into your theme folder for whichever client you are using.
+    - `Discord Settings > Themes > Open Themes Folder`
+    - `%appdata%/BetterDiscord/themes` or `%appdata%/Vencord/themes`
