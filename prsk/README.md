@@ -7,7 +7,7 @@ Changes the Discord logo in the top left and the default color.
 - Both are optional and can be turned off in settings
 
 ## Examples
-<img height=187 src="https://raw.githubusercontent.com/dabluee/discord-themes/refs/heads/main/prsk/assets/logoexample.png">
+<img height=187 src="https://raw.githubusercontent.com/dabluee/discord-themes/refs/heads/main/prsk/assets/logoexample.png" style="display: block; margin: 0 auto">
 
 ## How to Edit
 1. Open the .css file in any text editor (Notepad for example).
