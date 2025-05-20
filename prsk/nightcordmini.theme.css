@@ -60,6 +60,7 @@ body {
 	/* Recolor Discord's Blurple Basic: 
 		Copy the name from the one you want, this changes the most common blurple colors you see. Easy to swtich between options. */
 	--recolor: on;
+	--recolor-logo-only: off; 
 	--custom-color: var(--mafuyu);
 
 	/* Recolor Discord's Blurple Max: 
@@ -110,13 +111,19 @@ body {
     initial-value: on;
 }
 
+@property --recolor-logo-only {
+    syntax: 'on | off';
+    inherits: false;
+    initial-value: off;
+}
+
 @property --recolor-max {
     syntax: 'on | off';
     inherits: false;
     initial-value: off;
 }
 
-@container body style(--recolor-max: off) {
+@container body style(--recolor-max: off) or style(--recolor-logo-only: on) {
 	:root,
 	body {
 		--h: 235 !important;
@@ -125,7 +132,7 @@ body {
 	} 
 }
 
-@container body style(--recolor: on) {
+@container body style(--recolor: on) and style(--recolor-logo-only: off) {
 	:root,
 	:root.theme-dark,
 	.theme-dark,
@@ -154,7 +161,7 @@ body {
 	} 
 }
 
-@container body style(--recolor-max: on) {
+@container body style(--recolor-max: on) and style(--recolor-logo-only: off) {
 	:root.theme-dark,
 	.theme-dark,
 	.default-colors,
@@ -162,6 +169,12 @@ body {
 	body {
 		--blurple-50: var(--blurple) !important;
 	} 
+}
+
+@container body style(--recolor-logo-only: on) {
+	.wrapper__6e9f8.selected__6e9f8 .childWrapper__6e9f8, .wrapper__6e9f8:hover .childWrapper__6e9f8 {
+		background-color: var(--custom-color);
+	}	
 }
 
 
