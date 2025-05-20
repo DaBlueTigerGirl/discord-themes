@@ -1,0 +1,191 @@
+/**
+ * @name Nightcord Mini
+ * @description Change the Discord logo and the main color to match any Project Sekai group.
+ * @author dabluee
+ * @version 1.0.0
+ * @source 
+ * @authorId 
+*/
+
+@import 'https://dabluee.github.io/discord-themes/css/blurplerecolorer.css';
+
+:root,
+body {
+	container-name: body;
+
+	/* These are your options for which logo and color you would like to use */
+	--nightcord-logo: url('https://dabluee.github.io/discord-themes/prsk/assets/logos/nightcord.svg');
+	--vs-logo: url('https://dabluee.github.io/discord-themes/prsk/assets/logos/vs.svg');
+	--virtualsinger: hsl(175, 100%, 40%);
+	--miku: hsl(173, 60%, 50%);
+	--rin: hsl(47, 100%, 53%);
+	--len: hsl(56, 100%, 53%);
+	--luka: hsl(345, 100%, 87%);
+	--meiko: hsl(0, 70%, 57%);
+	--kaito: hsl(220, 60%, 50%);
+	--ln-logo: url('https://dabluee.github.io/discord-themes/prsk/assets/logos/ln.svg');
+	--leoneed: hsl(233, 69%, 57%);
+	--ichika: hsl(202, 85%, 57%);
+	--saki: hsl(49, 100%, 63%);
+	--honami: hsl(0, 80%, 67%);
+	--shiho: hsl(71, 73%, 50%);
+	--mmj-logo: url('https://dabluee.github.io/discord-themes/prsk/assets/logos/mmj.svg');
+	--moremorejump: hsl(93, 69%, 57%);
+	--minori: hsl(24, 100%, 83%);
+	--haruka: hsl(210, 100%, 80%);
+	--airi: hsl(336, 100%, 83%);
+	--shizuku: hsl(168, 71%, 77%);
+	--vbs-logo: url('https://dabluee.github.io/discord-themes/prsk/assets/logos/vbs.svg');
+	--vividbadsquad: hsl(337, 87%, 50%);
+	--kohane: hsl(340, 100%, 70%);
+	--an: hsl(189, 100%, 43%);
+	--akito: hsl(23, 100%, 57%);
+	--touya: hsl(208, 100%, 43%);
+	--wxs-logo: url('https://dabluee.github.io/discord-themes/prsk/assets/logos/wxs.svg');
+	--wonderland: hsl(36, 100%, 50%);
+	--tsukasa: hsl(44, 100%, 50%);
+	--emu: hsl(327, 100%, 70%);
+	--nene: hsl(156, 71%, 53%);
+	--rui: hsl(270, 75%, 73%);
+	--n25-logo: url('https://dabluee.github.io/discord-themes/prsk/assets/logos/n25.svg');
+	--niigo: hsl(288, 38%, 43%);
+	--kanade: hsl(304, 31%, 45%);
+	--mafuyu: hsl(239, 40%, 67%);
+	--ena: hsl(30, 40%, 66%);
+	--mizuki: hsl(326, 53%, 78%);
+
+	/* Change these values to match the ones you want above.
+		It is currently set to mafuyu and nightcord as an example. */
+	
+	/* Recolor Discord's Blurple Basic: 
+		Copy the name from the one you want above, this changes the most common blurple colors you see. Easy to swtich between options. */
+	--recolor: on;
+	--custom-color: var(--mafuyu);
+
+	/* Recolor Discord's Blurple Max: 
+		Copy the hsl numbers from the one you want above, this changes every blurple color, most of which you may not see. It can look strange at times so it's recommended to be off. */
+	--recolor-max: off;
+	--h: 239;
+	--s: 40%;
+	--l: 67%;
+
+	/* Choose the logo you would like */
+	--custom-logo: on;
+	--icon-url: var(--nightcord-logo);
+	--icon-size: 64%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* IGNORE EVERYTHING BELOW -- DO NOT TOUCH UNLESS YOU KNOW WHAT YOU ARE DOING */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@property --recolor {
+    syntax: 'on | off';
+    inherits: false;
+    initial-value: on;
+}
+
+@property --recolor-max {
+    syntax: 'on | off';
+    inherits: false;
+    initial-value: off;
+}
+
+@container body style(--recolor-max: off) {
+	:root,
+	body {
+		--h: 235 !important;
+		--s: 86% !important;
+		--l: 65% !important;
+	} 
+}
+
+@container body style(--recolor: on) {
+	:root,
+	:root.theme-dark,
+	.theme-dark,
+	.default-colors,
+	.theme-light,
+	body {
+		--blurple:  hsl(from var(--custom-color) h s l) !important;
+		--blurple-50: hsl(235 86% 65%) !important;
+		--blurple-hover: hsl(from var(--blurple) calc(h + 2) calc(s + 4) calc(l - 4)) !important;
+		--blurple-active: hsl(from var(--blurple) calc(h - 2) calc(s + 4) calc(l + 4)) !important;
+
+		--bg-brand: var(--blurple) !important;
+		--checkbox-background-checked: var(--blurple) !important;
+		--text-brand: var(--blurple) !important;
+		--brand-500: var(--blurple) !important;
+		--button-filled-brand-background: var(--brand-500);
+
+		--redesign-input-control-selected: color-mix(in oklab,var(--brand-500) 100%,var(--theme-base-color,#000) var(--theme-base-color-amount,0%));
+
+		--brand-560: var(--blurple-hover) !important;
+		--button-filled-brand-background-hover: var(--brand-560);
+
+		--brand-600: var(--blurple-active) !important;
+		--button-filled-brand-background-active: var(--brand-600);
+		
+	} 
+}
+
+@container body style(--recolor-max: on) {
+	:root.theme-dark,
+	.theme-dark,
+	.default-colors,
+	.theme-light,
+	body {
+		--blurple-50: var(--blurple) !important;
+	} 
+}
+
+
+
+@property --custom-logo {
+    syntax: 'on | off';
+    inherits: false;
+    initial-value: on;
+}
+
+/* Custom dm logo */
+@container body style(--custom-logo: on) {
+	[class^=childWrapper__] > svg:not([class^=favoriteicon_]) {
+		display: none;
+	}
+
+	[class^=childWrapper__]:has( > svg:not([class^=favoriteicon_]))::before {
+		content: '';
+		display: block;
+		position: absolute;
+		width: var(--icon-size);
+		height: var(--icon-size);
+		background: var(--white);
+		mask-image: var(--icon-url);
+		mask-size: auto;
+	}
+}
